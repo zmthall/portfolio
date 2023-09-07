@@ -51,7 +51,6 @@ body {
 }
 
 .top-nav ul {
-    list-style: none;
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
@@ -66,8 +65,10 @@ body {
     height: 100%;
 }
 
-.main-header a {
+.main-header a,
+.main-header ul {
     text-decoration: none;
+    list-style: none;
 }
 
 .top-nav a {
@@ -115,7 +116,7 @@ body {
     box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.2);
 }
 
-/* CSS for the logo inside main navigation*/
+/* CSS for the logo inside main and mobile navigation*/
 
 .logo-container {
     /* background-color: white; */
@@ -182,4 +183,125 @@ a.logo-home-link {
 
 .main-nav a:hover {
     color: hsl(210, 3%, 60%);
+}
+
+/* CSS for Mobile Navigation */
+
+.mobile-nav {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    background-color: var(--primary-color-black);
+    padding: 0 1.5rem;
+}
+
+.mobile-nav-icon-wrapper,
+.mobile-nav-btn {
+    height: 100%;
+}
+
+.mobile-nav-btn {
+    height: 80%;
+    cursor: pointer;
+    border-radius: 100vw;
+    background: none;
+    border: none;
+    position: relative;
+}
+
+.mobile-nav button a {
+    height: 100%;
+    display: block;
+}
+
+.mobile-nav-icon-wrapper {
+    color: var(--accent-color-light-grey);
+}
+
+.mobile-nav-icon-wrapper:hover {
+    color: hsl(210, 3%, 60%);
+}
+
+.mobile-nav-btn:hover {
+    background-color: rgba(175, 175, 175, 0.1);
+}
+
+.mobile-nav-container {
+    position: fixed;
+    width: 50vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    translate: 100%;
+    background-color: var(--accent-color-light-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: translate 300ms ease-in-out;
+    font-size: 2rem;
+}
+
+.mobile-nav-btn:hover .mobile-nav-container {
+    translate: 0;
+    cursor: default;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+.mobile-nav-container ul:first-child {
+    display: flex;
+    justify-content: center;
+    margin: 5vh 0;
+    gap: 2rem;
+    /* border-bottom: 2px solid; */
+    position: relative;
+}
+
+.mobile-nav-container ul:first-child::before {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: hsla(0, 0%, 20%, 0.3);
+    position: absolute;
+    bottom: 0;
+    translate: 0 5vh;
+}
+
+.mobile-nav-container ul:first-child {
+    height: 3rem;
+}
+
+.mobile-nav-container ul:last-child a {
+    padding: 1rem 0;
+    border-bottom: 1px solid hsla(0, 0%, 20%, 0.3);
+}
+
+.mobile-nav-container ul:last-child a:hover {
+    background-color: hsl(210, 3%, 80%);
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .top-nav {
+        display: none;
+    }
+
+    .main-header {
+        top: 0;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
+}
+
+@media (max-width: 500px) {
+    .mobile-nav-container {
+        width: 70vw;
+    }
 }
