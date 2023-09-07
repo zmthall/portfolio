@@ -230,6 +230,7 @@ a.logo-home-link {
 .test {
     width: 0px;
     height: 0px;
+    overflow: hidden;
 }
 
 .mobile-nav-container {
