@@ -217,6 +217,8 @@ a.logo-home-link {
 
 .mobile-dropdown-wrapper {
     width: calc(var(--main-nav-height) * 0.8);
+    background: none;
+    border: none;
 }
 
 .mobile-dropdown-wrapper:hover > .mobile-nav-container {
