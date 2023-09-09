@@ -215,10 +215,28 @@ a.logo-home-link {
     display: none;
 }
 
+/* CTA contact button by mobile nav */
+
+.mobile-phone-icon .icon-wrapper {
+    width: calc(var(--main-nav-height) * 0.6);
+}
+
+.mobile-phone-icon .icon-wrapper .plain-phone,
+.mobile-phone-icon .icon-wrapper .bold-phone {
+    fill: hsla(185, 53%, 40%, 0.75);
+}
+
+/* end */
+
 .mobile-dropdown-btn {
     width: calc(var(--main-nav-height) * 0.8);
     background: transparent;
     border: none;
+}
+
+.mobile-nav-right {
+    display: flex;
+    gap: 2rem;
 }
 
 .mobile-dropdown-btn:hover > .mobile-nav-container {
@@ -345,7 +363,7 @@ a.logo-home-link {
         display: flex;
     }
 
-    .mobile-nav-icon-wrapper:hover {
+    .mobile-nav-icon-wrapper:hover { 
         background-color: transparent;
         background: none;
     }
