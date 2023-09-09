@@ -221,9 +221,13 @@ a.logo-home-link {
     width: calc(var(--main-nav-height) * 0.6);
 }
 
-.mobile-phone-icon .icon-wrapper .plain-phone,
+.mobile-phone-icon .icon-wrapper .plain-phone {
+    fill: var(--accent-color-light-grey);
+}
+
 .mobile-phone-icon .icon-wrapper .bold-phone {
-    fill: hsla(185, 53%, 40%, 0.75);
+    /* fill: hsla(185, 53%, 40%, 0.75); */
+    fill: white;
 }
 
 /* end */
@@ -293,6 +297,10 @@ a.logo-home-link {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.mobile-nav-container ul:last-child li:last-child a {
+    border-bottom: 4px solid hsla(210, 3%, 85%, 0.8);
 }
 
 .mobile-nav-container ul:last-child li,
