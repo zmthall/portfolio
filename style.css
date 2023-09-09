@@ -344,6 +344,10 @@ a.logo-home-link {
     .mobile-nav {
         display: flex;
     }
+
+    .mobile-nav-icon-wrapper:hover {
+        background-color: transparent;
+    }
 }
 
 @media (max-width: 500px) {
