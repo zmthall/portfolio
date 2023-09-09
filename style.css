@@ -346,7 +346,8 @@ a.logo-home-link {
     }
 
     .mobile-nav-icon-wrapper:hover {
-        background-color: transparent;
+/*         background-color: transparent; */
+        background: transparent;
     }
 }
 
