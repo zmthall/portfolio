@@ -215,13 +215,13 @@ a.logo-home-link {
     display: none;
 }
 
-.mobile-dropdown-wrapper {
+.mobile-dropdown-btn {
     width: calc(var(--main-nav-height) * 0.8);
-    background: none;
+    background: transparent;
     border: none;
 }
 
-.mobile-dropdown-wrapper:hover > .mobile-nav-container {
+.mobile-dropdown-btn:hover > .mobile-nav-container {
     translate: 0 0;
 }
 
