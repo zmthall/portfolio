@@ -196,6 +196,7 @@ a.logo-home-link {
     gap: 3rem;
     font-size: 1.25rem;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .main-nav a {
@@ -304,7 +305,7 @@ a.logo-home-link {
 
 .mobile-nav-container ul:last-child {
     display: flex;
-    height: 20rem;
+    height: 24rem;
     flex-direction: column;
     align-items: center;
     overflow-y: auto;
@@ -443,7 +444,7 @@ a.logo-home-link {
 
 /* Media Queries */
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .top-nav {
         display: none;
     }
