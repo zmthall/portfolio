@@ -35,7 +35,7 @@ body {
     font-family: 'Fira Sans', sans-serif;
 }
 
-html:has(.mobile-dropdown-btn:hover) {
+body:has(.mobile-dropdown-btn:hover) {
     overflow-y: hidden;
 }
 
