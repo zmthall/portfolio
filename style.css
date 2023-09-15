@@ -35,6 +35,10 @@ body {
     font-family: 'Fira Sans', sans-serif;
 }
 
+html:has(.mobile-dropdown-btn:hover) {
+    overflow-y: hidden;
+}
+
 /* Sticky position main header used to make it so the top-nav is hidden */
 
 .main-header {
