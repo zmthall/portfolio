@@ -237,7 +237,8 @@ a.logo-home-link {
 
 .mobile-dropdown-btn {
     width: calc(var(--main-nav-height) * 0.5);
-    background: transparent;
+    background:transparent;
+    background: none;
     border: none;
 }
 
@@ -270,7 +271,7 @@ a.logo-home-link {
 
 .mobile-nav-container {
     position: fixed;
-    height: 100svh;
+    height: 100vh;
     width: 50vw;
     background-color: var(--accent-color-beige);
     top: 0;
