@@ -271,7 +271,7 @@ a.logo-home-link {
 
 .mobile-nav-container {
     position: fixed;
-    height: 100vh;
+    height: 100%;
     width: 50vw;
     background-color: var(--accent-color-beige);
     top: 0;
