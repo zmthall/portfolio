@@ -253,6 +253,7 @@ a.logo-home-link {
 .mobile-dropdown-btn:hover > .mobile-nav-container {
     translate: 0 0;
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+    overflow-x: hidden;
 }
 
 .mobile-nav-icon-wrapper {
