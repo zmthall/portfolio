@@ -10,10 +10,10 @@ font-family: 'Tangerine', cursive;
 :root {
     /* Color Variables */
     --primary-color-black: #272829;
-    --primary-color-grey: #61677A;
+    --primary-color-grey: hsl(226, 11%, 43%);
     --accent-color-light-grey: #D8D9DA;
     --accent-color-beige: #FFF6E0;
-    --text-color: hsl(0, 0%, 20%);
+    --text-color: #333333;
 
     /* Size Variables */ 
     --top-nav-height: 2rem;
@@ -284,9 +284,30 @@ a.logo-home-link {
     z-index: 2;
 }
 
-.mobile-nav-container ul:first-child::before {
+.mobile-nav-decor {
+    height: 4rem;
+    width: 100%;
+    position: absolute;
+    background-image: url("./imgs/Montains.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 0.25rem;
+    rotate: 10deg;
+    /* -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); */
+}
+
+.decor-lines:first-child {
+    left: auto;
+    right: 50%;
+    rotate: -20deg;
+    translate: 1.5rem 0.5rem;
+}
+
+.mobile-nav-container > ul:first-of-type::before {
     content: "";
-    background-color: hsla(210, 3%, 85%, 0.8);
+    background-color: hsla(210, 3%, 50%, 0.5);
     height: 4px;
     width: 100%;
     position: absolute;
@@ -294,25 +315,106 @@ a.logo-home-link {
     translate: 0 4rem;
 }
 
-.mobile-nav-container ul:first-child {
+.mobile-nav-container ul:first-of-type {
     display: flex;
     justify-content: center;
-    margin: 4rem 0;
     gap: 1.5rem;
+    margin-top: 4.5rem;
     height: var(--top-nav-height);
     position: relative;
 }
 
+.mobile-nav-separator {
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.mobile-nav-separator::before,
+.mobile-nav-separator::after {
+    position: absolute;
+    font-family: 'Black Ops One', cursive;
+    font-weight: 500;
+    top: 50%;
+    color: #333333;
+    font-size: 2.5rem;
+    z-index: 2;
+}
+
+.mobile-nav-separator::before {
+    left: 50%;
+    content: "Z";
+    translate: -2.5rem -45%;
+}
+
+.mobile-nav-separator::after {
+    content: "T";
+    left: auto;
+    right: 50%;
+    translate: 2.4rem -45%;
+}
+
+.mobile-nav-separator .separator-lines {
+    height: 2px;
+    width: 40%;
+    position: relative;
+    background-color: hsla(210, 3%, 50%, 0.5);
+    /* background-color: var(--primary-color-grey); */
+}
+
+.mobile-nav-separator .separator-lines:nth-child(2) {
+    width: 65%;
+    position: relative;
+}
+
+/* .mobile-nav-separator::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    height: 2rem;
+    width: 2px;
+    background-color: var(--primary-color-grey);
+    z-index: 2;
+    border-radius: 100vw;
+} */
+
+.mobile-nav-separator .separator-lines:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-left: 1rem solid #333333;
+    bottom: 0;
+    translate: -50% 50%;
+}
+
+.mobile-nav-separator .separator-lines:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-right: 1rem solid #333333;
+    bottom: 0;
+    translate: -50% 50%;
+}
+
 .mobile-nav-container ul:last-child {
     display: flex;
-    height: 24rem;
+    /* height: 24rem; */
     flex-direction: column;
     align-items: center;
     overflow-y: auto;
-}
-
-.mobile-nav-container ul:last-child li:last-child a {
-    border-bottom: 4px solid hsla(210, 3%, 85%, 0.8);
+    border-bottom: 4px solid hsla(210, 3%, 50%, 0.5);
 }
 
 .mobile-nav-container ul:last-child li,
@@ -484,5 +586,23 @@ a.logo-home-link {
         left: -1.5rem;
         top: 50%;
         translate: 50% -50%;
+    }
+}
+
+@media (max-height: 540px) {
+    .mobile-nav-container ul:last-child {
+        height: 20rem;
+        border-bottom: 4px dashed hsla(210, 3%, 50%, 0.5);
+    }
+
+    .mobile-nav-container ul:last-child::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid hsla(210, 3%, 50%, 0.5);
+        position: absolute;
+        top: 30.6rem;
     }
 }
