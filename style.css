@@ -475,9 +475,23 @@ a.logo-home-link {
 
 /* CSS for main content */
 
-.main-content {
-    height: 300vh;
+.hero-section {
+    background-color: black;
+    position: relative;
+    height: 100vh;
 }
+
+.hero-section img {
+    opacity: 25%;
+    position: absolute;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+}
+
+/* .main-content {
+    height: 300vh;
+} */
 
 /* CSS for main footer */
 
