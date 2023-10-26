@@ -75,7 +75,7 @@
 /* About Me Section Styline */
 
 section.about-me {
-    padding: 5rem 2rem;
+    padding: 10rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,7 +100,7 @@ section.about-me.parallax {
 }
 
 .content-container {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     padding: 2rem;
     border-radius: 1rem;
 }
