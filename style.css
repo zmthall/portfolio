@@ -18,6 +18,12 @@ font-family: 'Tangerine', cursive;
     /* Size Variables */ 
     --top-nav-height: 2rem;
     --main-nav-height: 6.5rem;
+
+    /* Font-families */
+    --cursive-main: 'Black Ops One', cursive;
+    --cursive: 'Tangerine', cursive;
+    --sans-serif: 'Fira Sans', sans-serif;
+    --serif: 'Noto Serif Tamil', serif;
 }
 
 *,
@@ -35,16 +41,12 @@ body {
     font-family: 'Fira Sans', sans-serif;
 }
 
-body:has(.mobile-dropdown-btn:hover) {
-    overflow-y: hidden;
-}
-
 /* Sticky position main header used to make it so the top-nav is hidden */
 
 .main-header {
     position: sticky;
     top: calc(-1 * var(--top-nav-height));
-    z-index: 1;
+    z-index: 2;
 }
 
 /* CSS for Top Nav */
@@ -95,7 +97,6 @@ body:has(.mobile-dropdown-btn:hover) {
 }
 
 .icon-wrapper.envelope:hover .plain-envelope {
-    /* content: url("./imgs/envelope-icon-hover.svg"); */
     display: none;
 }
 
@@ -108,7 +109,6 @@ body:has(.mobile-dropdown-btn:hover) {
 }
 
 .icon-wrapper.telephone:hover .plain-phone {
-    /* content: url("./imgs/telepone-icon-hover.svg"); */
     display: none;
 }
 
@@ -220,7 +220,6 @@ a.logo-home-link {
     align-items: center;
     padding: 0 1.5rem;
     display: none;
-    z-index: 1;
 }
 
 /* CTA contact button by mobile nav */
@@ -465,39 +464,11 @@ a.logo-home-link {
     overflow: hidden;
 }
 
-/* .main-nav a:first-child:focus .logo-bold-text {
-    color: var(--primary-color-grey);
-}
-
-.main-nav a:first-child:focus .logo-cursive-text {
-    color: var(--accent-color-light-grey);
-} */
-
-/* CSS for main content */
-
-.hero-section {
-    background-color: black;
-    position: relative;
-    height: 100vh;
-}
-
-.hero-section img {
-    opacity: 25%;
-    position: absolute;
-    height: 100%;
-    right: 0;
-    bottom: 0;
-}
-
-/* .main-content {
-    height: 300vh;
-} */
-
 /* CSS for main footer */
 
 .main-footer {
     height: calc(var(--main-nav-height) * 0.7);
-    width: 100vw;
+    width: 100%;
     background-color: var(--primary-color-black);
     padding: 0 1.5rem;
     /* position: relative;
@@ -561,7 +532,41 @@ a.logo-home-link {
     pointer-events: none;
 }
 
-/* Main footer navigation */
+/* Website Buttons */
+
+.primary-btn {
+    display: inline-block;
+    padding: 2rem 3rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgba(100, 100, 100);
+    border-radius: 1rem;
+    border: 2px solid black;
+    text-decoration: none;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border 0.5s ease-in-out;
+}
+
+.primary-btn:hover {
+    background-color: rgba(200, 200, 200, 0.9);
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.3);
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid white;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.cta-btn:hover {
+    color: rgba(50, 50, 50);
+    background: white;
+}
 
 /* Media Queries */
 
