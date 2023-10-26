@@ -75,7 +75,7 @@
 /* About Me Section Styline */
 
 section.about-me {
-    padding: 2rem;
+    padding: 5rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
